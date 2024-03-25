@@ -1,0 +1,23 @@
+{
+  "name": "web700-app",
+  "version": "1.0.0",
+  "description": "assignment3",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rracapili/web700-assignment3.git"
+  },
+  "author": "Ronald Capili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rracapili/web700-assignment3/issues"
+  },
+  "homepage": "https://github.com/rracapili/web700-assignment3#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

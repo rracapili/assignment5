@@ -1,0 +1,58 @@
+/* Navigation Bar */
+.bg-light {
+    background-color: lightgray !important; /* Change background color */
+  }
+  
+  .navbar-light .navbar-brand {
+    color: blue !important; /* Change text color */
+  }
+  
+  .nav-link {
+    color: green !important; /* Change text color */
+  }
+  
+  .nav-link:hover {
+    color: red !important; /* Change text color on hover */
+  }
+  
+  /* App Background */
+  body, html {
+    background-color: #928686; /* Change background color */
+  }
+  
+  /* Primary Button */
+  .btn-primary {
+    background-color: blue !important; /* Change background color */
+    border-color: blue !important; /* Change border color */
+    color: white !important; /* Change text color */
+  }
+  
+  .btn-primary:hover {
+    background-color: navy !important; /* Change background color on hover */
+    border-color: navy !important; /* Change border color on hover */
+  }
+  
+  /* Table cells inside "odd" numbered table rows */
+  table tr:nth-child(odd) td {
+    background-color: lightblue; /* Change background color */
+  }
+  
+  /* All Heading elements */
+  h1, h2, h3, h4, h5, h6 {
+    color: purple !important; /* Change text color */
+  }
+  
+  /* All Anchor elements (HTML Links) */
+  a {
+    color: blue !important; /* Change text color */
+  }
+  
+  a:hover {
+    color: red !important; /* Change text color on hover */
+  }
+  
+  /* Fieldset Legends */
+  legend {
+    color: green !important; /* Change text color */
+  }
+  
