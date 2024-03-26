@@ -28,6 +28,25 @@ module.exports.initialize = function () {
     });
 }
 
+module.exports.getCourseById = function(id) {
+    return new Promise(function (resolve, reject) {
+        var course = null;
+
+        for (let i = 0; i < dataCollection.courses.length; i++) {
+            if (dataCollection.courses[i].courseId == id) {
+                course = dataCollection.courses[i];
+            }
+        }
+
+        if (!course) {
+            reject("query returned 0 results");
+            return;
+        }
+
+        resolve(course);
+    });
+};
+
 module.exports.getAllStudents = function(){
     return new Promise((resolve,reject)=>{
         if (dataCollection.students.length == 0) {
@@ -99,6 +118,30 @@ module.exports.getStudentsByCourse = function (course) {
         }
 
         resolve(filteredStudents);
+    });
+};
+
+module.exports.updateStudent = function(studentData) {
+    return new Promise(function (resolve, reject) {
+        let updated = false;
+
+        for (let i = 0; i < dataCollection.students.length; i++) {
+            if (dataCollection.students[i].studentNum == studentData.studentNum) {
+                // Handle the "TA" checkbox data
+                studentData.TA = studentData.TA ? true : false;
+
+                // Overwrite the student with the new data
+                dataCollection.students[i] = studentData;
+                updated = true;
+                break;
+            }
+        }
+
+        if (updated) {
+            resolve();
+        } else {
+            reject("unable to find student");
+        }
     });
 };
 
